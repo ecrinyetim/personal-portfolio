@@ -1,0 +1,215 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.portfolio-section {
+    background-color: #f8f4fb !important;
+    padding-top: 4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.portfolio-section h1,
+.portfolio-section h2 {
+    color: #4b2354;
+}
+
+.portfolio-section h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.portfolio-section h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Mor çizgi altında, hover'da animasyonlu */
+.section-underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #7b2cbf, #9d4edd);
+    border-radius: 4px;
+    transition: transform 0.4s ease-in-out;
+}
+
+h2:hover .section-underline {
+    transform: scaleX(1.5);
+}
+
+/* Proje açıklamaları */
+.portfolio-section p {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.7;
+    background-color: rgb(245, 231, 250);
+    padding: 1rem 1.2rem;
+    border-radius: 0.7rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+.portfolio-section p:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+
+}
+
+/* Proje başlıkları */
+.portfolio-section h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #7b2cbf;
+    margin-bottom: 0.8rem;
+}
+
+/* Görsel grid */
+.image-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-grid img {
+    width: 30%;
+    min-width: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.6rem;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* GitHub bağlantısı */
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #5b21b6;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #341c3b;
+}
+
+/* Scroll tabanlı animasyon */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-fade-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+.clickable {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.clickable:hover {
+    transform: scale(1.05);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.close-button:hover {
+    transform: scale(1.2);
+    color: #ffcccc;
+}
+@media (max-width: 768px) {
+    .portfolio-section {
+        padding-top: 2rem;
+        text-align: center;
+    }
+
+    .portfolio-section h1 {
+        font-size: 2rem;
+    }
+
+    .portfolio-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-section p {
+        font-size: 0.95rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .portfolio-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .section-underline {
+        width: 60px;
+        height: 3px;
+    }
+
+    .image-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .image-grid img {
+        width: 90%;
+    }
+
+    .modal-content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+
+    .close-button {
+        font-size: 1.5rem;
+        top: 10px;
+        right: 16px;
+    }
+
+    .github-link {
+        font-size: 0.95rem;
+        justify-content: center;
+    }
+}
